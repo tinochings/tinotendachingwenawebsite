@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="sn" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <title>Nhoroondo</title>
+  <link rel="icon" type="image/x-icon" href="../images/favicon/favicon.png" th:href="@{/images/favicon/favicon.png}">
+  <link rel="apple-touch-icon" href="../images/favicon/favicon.png" th:href="@{/images/favicon/favicon.png}">
+  <link rel="stylesheet" href="../css/experiences.css" th:href="@{/css/experiences.css}">
+  <link rel="stylesheet" href="../css/nav.css" th:href="@{/css/nav.css}">
+</head>
+
+<body>
+
+  <script th:src="@{/webjars/bootstrap/5.3.1/js/bootstrap.bundle.min.js}"
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <nav class="navbar navbar-expand-md">
+    <div class="container">
+      <div class="navbar-brand">
+        <a href="../html/sn/homepage.html" th:href="@{/sn/homepage}"><img id="logo" src="../images/logo/WCLOGO1.png" th:src="@{/images/logo/WCLOGO1.png}"
+          alt="WC Brand logo"/></a>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon">></span>
+      </button>
+
+      <div id="collapsibleNavbar" class="nav-cont collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a title="Tarira nhoroondo yaTinotenda" class="menu-item vertical-centre" href="../experiences.html" th:href="@{/sn/experiences}" >Nhoroondo</a>
+          </li>
+          <li class="nav-item">
+            <a class="menu-item vertical-centre" href="../services.html" th:href="@{/sn/services}">Mabasa</a>
+          </li>
+          <li class="nav-item">
+            <a title="Shandura mashoko kuti ave echirungu" class="menu-item vertical-centre" href="../html/experiences.html" id="language" th:href="@{/experiences}">English</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="menu-item vertical-centre dropdown-toggle" href="#" role="button" id="socialsMenuLink"
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Socials
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="socialsMenuLink">
+              <a class="dropdown-item" href="https://www.facebook.com/tchingwena1" target="_blank"><img
+                      src="../images/SocialMedia/facebook.svg" th:src="@{/images/SocialMedia/facebook.svg}" class="linkimg" alt="Facebook Logo" /> <span>Facebook</span></a>
+              <a class="dropdown-item" href="http://www.linkedin.com/in/tinotenda-chingwena-6034a6211"
+                 target="_blank"><img src="../images/SocialMedia/linkedin.svg" th:src="@{/images/SocialMedia/linkedin.svg}" class="linkimg"
+                                      alt="Linkedin Logo" /> <span>LinkedIn</span></a>
+              <a class="dropdown-item" href="https://twitter.com/ndini_nhari" target="_blank"><img
+                      src="../images/SocialMedia/twitter.svg" th:src="@{/images/SocialMedia/twitter.svg}" class="linkimg" alt="Twitter Logo" /> <span>Twiter</span> </a>
+              <a class="dropdown-item" href="https://github.com/tinochings" target="_blank"><img
+                      src="../images/SocialMedia/githublogo.svg" th:src="@{/images/SocialMedia/githublogo.svg}" class="linkimg" alt="Github Logo" /> <span>Github</span> </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <section>
+      <div class="project-item">
+        <h1>Trin Media (Website)</h1>
+        <div class="row spacing">
+          <div class="col vertical-centre">
+            <img src="../images/ProjectsDone/Trin%20logo-01.png" th:src="@{/images/ProjectsDone/Trin%20logo-01.png}"
+              class="pictures" alt="Trin media logo" />
+          </div>
+          <div class="col vertical-centre">
+            <img src="../images/ProjectsDone/trinmediascreenshot.png"
+            th:src="@{/images/ProjectsDone/trinmediascreenshot.png}" class="pictures"
+              alt="Trin Media Website screenshot" />
+          </div>
+        </div>
+        <p class="application-about spacing">Trin Media ikambani ine hunyanzvi pakugadzira tariro ezviro zvinoshanda
+          mumacomputer kuti vaku batsirei kutengesa zvamuno tengesa nehuwando hwazvo uye zve vachiwedzera kufara
+          kwevatengi.</p>
+          
+        <p class="spacing">
+          Mukugadzira tariro yewebusaiti yeTrin Media ndaka shandisa Bootstrap, HTML, JavaScript, neCSS. Pakugadzira computer
+          unobatanidzwa nedandemutande wemawebusaiti ndaka shandisa Spring Boot uye zve ndichi shandisa mutauro
+          wemacomputer unonzi Java.
+        </p>
+        <a aria-label="Vhura webusaiti yeTrin Media" href="https://www.trin3media.com" target="_blank">www.trin3media.com</a>
+      </div>
+    </section>
+
+    <section>
+      <div class="project-item">
+        <h1>Madzinza</h1>
+        <div class="row spacing">
+          <div class="col vertical-centre">
+            <img th:src="@{/images/ProjectsDone/totems.png}" src="../images/ProjectsDone/totems.png" class="pictures" alt="Madzinza Application totems page" />
+          </div>
+          <div class="col vertical-centre">
+            <img src="../images/ProjectsDone/madzinza-01.svg" th:src="@{/images/ProjectsDone/madzinza-01.svg}" class="pictures" alt="Madzinza Application Logo" />
+          </div>
+        </div>
+        <p class="application-about spacing">
+          Munogona kutenga Madzinza paGoogle Play Store nekamari kadiki diki. Madzinza inoita $1.50 chete chete.
+          Dungamunhu ano zivikanwa nekwaanobva. Nhoroondo yako, nenhoroondo yemutupo wako ndiko kwaunobva.
+          Madzinza yaka komberedza mitupo yose inowanikwa muZimbabwe. Haungati uri muZimba usinga zive nhoroondo yako
+          nenhoroondo yenyika yako.</p>
+        <p class="spacing">
+          Basa rangu rekutanga randaka zvitumidza kugadzira, ishandamurunhare inoyi inonzi Madzinza. Matariro, maitiro
+          eshandamurunhare, kushandura mashoko uye zve nekunyora mashoko anoverengwa mushandamurunhare akaitwa neni
+          ndega.
+          Ndanga ndashungurudzwa nekushaya ruzivo rwekwandinobva. Sekudaro ndakazvipa basa rekutsvaga nhoroondo
+          yeZimbabwe
+          uye zve, kunyatso tsvagurudza kuti ruzivo rwacho ndere mandorokwati here. Ndawana ruzivo irworo ndaka gadzira
+          shandamurunhare inonzi Madzinza. Basa iri ndaka ritanga ndiri pazororo mukupera kwegore rechipiri ndichiri
+          kuchikoro.
+          Ndaifarira kunyora zvinyorwa zvinoverengwa nemacomputer zvisingaite. Ndakaona kuti ndine munyati wekugadzira
+          shandamurunhare
+          unoshanda pamutandira wemashandamurunhare unonzi Android saka ndakaita saizvozvo. Madzinza yakanyorwa
+          nechiverengo
+          chinoverengwa nemacomputer inonzi Java. Ndakanyora magwarazima andaka fungidzira ndega kuti vese vano shandisa
+          shandamurunhare
+          vawane rufaro runo pfurikidza. Ndaivavaria kwazvo kugadzira Madzina uye zve ndichada kugadzira zvakada
+          kufanana
+          neshandamurunhare
+          inoyi.
+        </p>
+        <a aria-label="Turunura Madzinza" href="https://play.google.com/store/apps/details?id=com.madzinza.madzinza" target="_blank">Turunura Madzinza
+          paPlay Store</a>
+      </div>
+    </section>
+
+    <section>
+      <div class="project-item">
+        <h1>Poets Kingdom</h1>
+        <div class="row spacing">
+          <div class="col vertical-centre">
+            <img src="../images/ProjectsDone/Create%20Poem.png" th:src="@{/images/ProjectsDone/Create%20Poem.png}" class="pictures" alt="Poets Kingdom create poem page" />
+          </div>
+          <div class="col vertical-centre">
+            <img src="../images/ProjectsDone/poetskingdomlogo.png" th:src="@{/images/ProjectsDone/poetskingdomlogo.png}" class="pictures"
+              alt="Poets Kingdom Application Logo" />
+          </div>
+        </div>
+        <p class="application-about spacing">
+          Poets Kingdom inogona kuturunurwa paGithub yangu. Munogona kugadzira madetembo akasvonaka fani uye zve
+          amunenge
+          magadzira nemadiro enyu. Kudetemba kunobva mumweya wemunhu uye zve matariro enhetembo anofanira kufanana
+          nekunatswa
+          kwemweya unenge wadududza zviri mumoyo. Poets Kingdom ino batsira mukugadzira kunaka kwefungiro yemunhu uye
+          zve
+          yakagadzirwa kuti inyatso nakidza kushandisa parunhare.
+        </p>
+        <p class="spacing">
+          Poets Kingdom ishandamurunhare yandaka gadzira nevavariro yemoyo mukupera kwekudzidza danho reruzvio
+          rwemacomputer. Ndino farira kuverenga nekunyora madetembo. Poets Kingdom ishandamurunhare yandaka gadzira kuti
+          ndigone kubatsirikana
+          kunyora, kuona nekuchengetedza zvanda detemba mumatariro andaifungira zve. Ndaka tsvaga mashandamurunhare
+          anobatsira
+          kuita izvozvi asi hapana shandamurunhare yandaka wana yaka gutsa moyo. Saizvozvo, ndaka gadzira Poets Kingdom.
+          Shandamurunhare
+          inoyi inogona kugadzira mifananidzo yakasvonaka setsvarakadenga uye zve ino gadzira gwaro inonzi PDF. Pari
+          zvino, ndichiri
+          kushanda mukugadzira shandamurunhare inoyi. Ndiri kuramba ndichiwedzera zvandinenge ndichiona kuti hazvipo.
+          Kana muchida munogona kuverenga magadziro andakaita shandamurunhare inoyi paGithub yangu. Kuti ndigone
+          kugadzira
+          mufananidzo unopangidza nhetembo uye zve kuti ndigadzire mifananidzo yakasvonaka ndaka nyora zvinyorwa
+          zvinoverengwa nemacomputer anotangidza patsva kugadzira matariro nezvinyorwa zvenhetembo. Ndakato gadzira
+          mutandiro unobatsira kuziva kuti zvinyorwa zvenhetembo hazvi pfurikidza hupamhi nekureba paku gadzira
+          mifananidzo kana gwaro rinonzi PDF. Ndaka nakidzwa fani mukugadzira shandamurunhare inoyi. Zvakambo
+          ndishungurudza asi ndaka kunda.</p>
+        <a aria-label="Turunura Poets Kingdom" class="spacing" href="https://github.com/tinochings/PoetsKingdom/blob/master/app/Debug%20APK/app-debug.apk"
+          target="_blank">Turunura Poets Kingdom</a>
+        <br>
+        <br>
+        <a aria-label="Tarira magadziriro akaitwa Poets Kingdom" href="https://github.com/tinochings/PoetsKingdom" target="_blank">Verenga magadziro ePoets Kingdom</a>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

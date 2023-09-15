@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../js/services.js" th:src="@{/js/services.js}" async></script>
+    <link th:href="@{/webjars/bootstrap/5.3.1/css/bootstrap.min.css}"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+    <title>Tinotenda Chingwena Software Developer Services</title>
+  <link rel="icon" type="image/x-icon" href="../images/favicon/favicon.png" th:href="@{/images/favicon/favicon.png}">
+  <link rel="apple-touch-icon" href="../images/favicon/favicon.png" th:href="@{/images/favicon/favicon.png}">
+  <link rel="stylesheet" href="../../static/css/services.css" th:href="@{/css/services.css}">
+  <link rel="stylesheet" href="../../static/css/alertbox.css" th:href="@{/css/alertbox.css}">
+  <link rel="stylesheet" href="../../static/css/nav.css" th:href="@{/css/nav.css}">
+</head>
+
+<body>
+  <script th:src="@{/webjars/bootstrap/5.3.1/js/bootstrap.bundle.min.js}"
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-expand-md">
+      <div class="container">
+        <div class="navbar-brand">
+          <a href="../html/homepage.html" th:href="@{/}"><img id="logo" src="../../static/images/logo/WCLOGO1.png" th:src="@{/images/logo/WCLOGO1.png}" alt="WC Brand logo"/></a>
+        </div>
+  
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div id="collapsibleNavbar" class="nav-cont collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="menu-item vertical-centre" href="../html/experiences.html" th:href="@{/experiences}">Experiences</a>
+          </li>
+          <li class="nav-item">
+            <a class="menu-item vertical-centre" href="../html/services.html" th:href="@{/services}">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="menu-item vertical-centre" href="../html/sn/services.html" th:href="@{/sn/services}" id="language">Zezuru</a>
+          </li>
+          <li class="nav-item dropdown">
+            <li class="nav-item dropdown">
+          <a class="menu-item vertical-centre dropdown-toggle" href="#" role="button" id="socialsMenuLink"
+            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Socials
+          </a>
+  
+          <div class="dropdown-menu" aria-labelledby="socialsMenuLink">
+            <a title="Tinotenda Chingwena's Facebook page" aria-label="Opens Tinotenda Chingwena's facebook page" class="dropdown-item" href="https://www.facebook.com/tchingwena1" target="_blank"><img
+                    src="../../static/images/SocialMedia/facebook.svg" th:src="@{/images/SocialMedia/facebook.svg}" class="linkimg" alt="Facebook Logo" /> <span>Facebook</span></a>
+            <a title="Tinotenda Chingwena's LinkedIn page" aria-label="Opens Tinotenda Chingwena's LinkedIn page" class="dropdown-item" href="http://www.linkedin.com/in/tinotenda-chingwena-6034a6211"
+               target="_blank"><img src="../../static/images/SocialMedia/linkedin.svg" th:src="@{/images/SocialMedia/linkedin.svg}" class="linkimg"
+                                    alt="Linkedin Logo" /> <span>LinkedIn</span></a>
+            <a title="Tinotenda Chingwena's Twitter page" aria-label="Opens Tinotenda Chingwena's Twitter page" class="dropdown-item" href="https://twitter.com/ndini_nhari" target="_blank"><img
+                    src="../images/SocialMedia/twitter.svg" th:src="@{/images/SocialMedia/twitter.svg}" class="linkimg" alt="Twitter Logo" /> <span>Twiter</span> </a>
+            <a title="Tinotenda Chingwena's Github page" aria-label="Opens Tinotenda Chingwena's GitHub page" class="dropdown-item" href="https://github.com/tinochings" target="_blank"><img
+                    src="../../static/images/SocialMedia/githublogo.svg" th:src="@{/images/SocialMedia/githublogo.svg}" class="linkimg" alt="Github Logo" /> <span>Github</span> </a>
+          </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="formAlert" style="display: none;" class="container-fluid alertBox fixed-top">
+      <span id="closeButtonId" class="closebtn" style="display: none;" onclick="closeSpan()">&times;</span>
+      <div class="row alertTitle">
+          <h1 id="alertTitle" th:text="${alertTitle}">Success</h1>
+      </div>
+      <div class="row alertBody">
+          <div id="formLoadingGifCont" class="row">
+              <img id="formLoadingGif" width="100px" height="100px" th:src="@{/images/miscellaneous/loading.gif}"
+                  src="../images/miscellaneous/loading.gif" alt="Loding gif">
+          </div>
+          <p id="alertBody"></p>
+      </div>
+  </div>
+
+  <div class="container formcont">
+    <h1>Let's create magic together</h1>
+    <form id="form" onsubmit="sendData('en');return false" accept-charset="UTF-8" th:object="${serviceRequest}"
+    th:action="@{/service}" method="post" class="servicescont">
+      <div class="row">
+        <div class="col">
+          <label for="clientName">Name</label>
+          <input th:field="*{name}" aria-required="true" autocomplete="name" id="clientName" class="selectors" type="text" name="name" value="" required>
+        </div>
+        <div class="col">
+          <label for="email">Email</label>
+          <input th:field="*{email}" aria-required="true" autocomplete="email" id="email" class="selectors" type="email" name="email" value="" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-cont">
+          <label for="servicesType">Service</label>
+          <select th:field="*{service}" aria-required="true" id="servicesType" class="selectors" name="service" required>
+            <option th:value="''" th:text="'Nothing Selected'"></option>
+            <option th:value="'Android Application'" th:text="'Android Application'"></option>
+            <option th:value="'Team Project'" th:text="'Invite Me To A Team Project'"></option>
+            <option th:value="'Website'" th:text="'Website'"></option>
+          </select>
+        </div>
+        <div class="col col-cont">
+          <label for="budget">Budget</label>
+          <select th:field="*{budget}" id="budget" aria-required="true" class="selectors" name="budget" required>
+            <option th:value="''">$0</option>
+            <option th:value="'$0 - $150'" th:text="'$0 - $150'"></option>
+            <option th:value="'$150 - $300'" th:text="'$150 - $300'"></option>
+            <option th:value="'$300 - $550'" th:text="'$300 - $550'"></option>
+            <option th:value="'$500+'" th:text="'$500+'"></option>
+          </select>
+        </div>
+      </div>
+
+      <div id="details-cont" class="row">
+        <label id="label2" for="projectDetails">Details</label>
+        <textarea aria-required="true" class="textinput" id="projectDetails" name="details" rows="100" cols="100" required></textarea>
+        <div class="row vertical-centre">
+          <input id="submitbutton" role="button" type="submit" name="submitbutton"></input>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

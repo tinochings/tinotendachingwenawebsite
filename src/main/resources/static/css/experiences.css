@@ -1,0 +1,91 @@
+:root {
+  --background_color : #fff;
+  --main_theme_color : #EFE1CE;
+  --off_white : #FCFBF8;
+  --text_color : #533621;
+  --container_color: #fff;
+  --margin_top_val : 15px;
+}
+* {
+  font-family: 'Helvetica', sans-serif;
+  color: #533621;
+  font-size: 18px;
+}
+h1 {
+  font-weight: bold;
+}
+body {
+  background-color: var(--background_color);
+}
+.project-item{
+  margin-top: 75px;
+  padding-bottom: 15px;
+}
+.project-item:nth-child(1) {
+  margin-top: 0px;
+}
+
+.project-item a{
+  font-weight: bolder;
+  font-size: 20px;
+  text-decoration: underline;
+}
+footer img {
+  border-radius: 25px;
+  width: 30px;
+  height: 30px;
+  float: left;
+  border: 15px;
+}
+.pictures {
+  max-height: 512px;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.firstSection::-webkit-scrollbar {
+  display: none;
+}
+.secondSection::-webkit-scrollbar {
+  display: none;
+}
+.thirdSection::-webkit-scrollbar {
+  display: none;
+}
+.application-about{
+  font-size: 1.5em;
+}
+.spacing{
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 576px) {
+  .justify-content-end{
+    justify-content: center !important;
+  }
+  li {
+    margin-top: 5px;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .pictures {
+    max-height: 256px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .menuoptions {
+    height: auto;
+  }
+  .fa-bars {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 256px) {
+  .pictures {
+    max-height: 128px;
+  }
+}

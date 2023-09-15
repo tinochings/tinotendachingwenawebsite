@@ -1,0 +1,122 @@
+:root {
+  --background_color : #fff;
+  --main_theme_color : #EFE1CE;
+  --off_white : #FCFBF8;
+  --text_color : #533621;
+  --container_color: #fff;
+  --margin_top_val : 15px;
+}
+* {
+  font-family: 'Helvetica', sans-serif;
+  color: #533621;
+  font-size: 18px;
+}
+.row {
+  margin-top: var(--margin_top_val);
+  margin-right: 10px;
+}
+.col {
+  display: flex;
+  justify-content: left;
+}
+label {
+  font-size: 20px;
+  align-self: center;
+  font-weight: bold;
+}
+body {
+  background-color: var(--background_color);
+}
+
+h1{ 
+  text-align: center;
+  font-size: 75px;
+  font-weight: bold;
+}
+button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+#form {
+  position: relative;
+  margin-top: 50px;
+  height: auto;
+  text-align: center;
+}
+.col{
+  flex-direction: column;
+  text-align: center;
+}
+.col-cont{
+  margin-top: 15px;
+}
+#details-cont{
+  margin-top: 40px;
+}
+.selectors {
+  padding: 15px;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--off_white);
+  font-weight: bold;
+  border-radius: 10px;
+  border-color: #EFE1CE;
+  border-style:groove;
+}
+.textinput {
+  border-style: groove;
+  border-color: #EFE1CE;
+  border-width: 3.5px;
+  position: relative;
+  background-color: var(--off_white);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  padding: 5px;
+  border-radius: 10px;
+}
+#submitbutton {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #cc9000;
+  color: white;
+  border-radius: 10px;
+  width: auto;
+  margin-bottom: 5px;
+  font-size: 25px;
+}
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 45px;
+  }
+  .row {
+    flex-direction: column;
+    margin-right: 0px;
+  }
+  .formcont *{
+    margin-top: 15px;
+  }
+  /* .justify-content-end{
+    justify-content: center !important;
+  } */
+}
+@media screen and (max-width: 350px) {
+  .fa-bars {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 304px) {
+  h1{
+    font-size: 25px;
+  }
+}

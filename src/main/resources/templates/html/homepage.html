@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="max-image-preview:large">
+  <meta name="description"
+    content="Tinotenda Chingwena is a passionate and innovative software developer looking to make a strong impact with his technological
+        skills. I am experienced in Android application development, web development, and backend development, and my services are at your disposal.">
+  <link th:href="@{/webjars/bootstrap/5.3.1/css/bootstrap.min.css}"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Tinotenda Chingwena Software Developer</title>
+  <link rel="icon" type="image/x-icon" href="../../static/images/favicon/favicon.png"
+    th:href="@{/images/favicon/favicon.png}">
+  <link rel="apple-touch-icon" href="../../static/images/favicon/favicon.png" th:href="@{/images/favicon/favicon.png}">
+  <link rel="stylesheet" href="../../static/css/homepage.css" th:href="@{/css/homepage.css}">
+  <link rel="stylesheet" href="../../static/css/nav.css" th:href="@{/css/nav.css}">
+  <link rel="stylesheet" th:href="@{/css/fontawesome/css/all.min.css}" />
+
+</head>
+
+<body>
+
+  <script th:src="@{/webjars/bootstrap/5.3.1/js/bootstrap.bundle.min.js}"
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+  <nav class="navbar navbar-expand-md">
+    <div class="container">
+      <div class="navbar-brand">
+        <img id="logo" src="../../static/images/logo/WCLOGO1.png" th:src="@{/images/logo/WCLOGO1.png}"
+          alt="WC Brand logo" />
+      </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="collapsibleNavbar" class="nav-cont collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a title="Navigate to Tinotenda's experiences" class="menu-item vertical-centre"
+              href="../html/experiences.html" th:href="@{/experiences}">Experiences</a>
+          </li>
+          <li class="nav-item">
+            <a title="Navigate to request Tinotenda's services" class="menu-item vertical-centre"
+              href="../html/services.html" th:href="@{/services}">Services</a>
+          </li>
+          <li class="nav-item">
+            <a title="Change language to Zezuru" class="menu-item vertical-centre" href="../html/sn/homepage.html"
+              th:href="@{/sn/homepage}" id="language">Zezuru</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a title="Click to bring out socials container" class="menu-item vertical-centre dropdown-toggle" href="#"
+              role="button" id="socialsMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Socials
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="socialsMenuLink">
+              <a title="Tinotenda Chingwena's Facebook page" aria-label="Opens Tinotenda Chingwena's facebook page"
+                class="dropdown-item" href="https://www.facebook.com/tchingwena1" target="_blank"><img
+                  src="../../static/images/SocialMedia/facebook.svg" th:src="@{/images/SocialMedia/facebook.svg}"
+                  class="linkimg" alt="Facebook Logo" /> <span>Facebook</span></a>
+              <a title="Tinotenda Chingwena's LinkedIn page" aria-label="Opens Tinotenda Chingwena's LinkedIn page"
+                class="dropdown-item" href="http://www.linkedin.com/in/tinotenda-chingwena-6034a6211"
+                target="_blank"><img src="../../static/images/SocialMedia/linkedin.svg"
+                  th:src="@{/images/SocialMedia/linkedin.svg}" class="linkimg" alt="Linkedin Logo" />
+                <span>LinkedIn</span></a>
+              <a title="Tinotenda Chingwena's Twitter page" aria-label="Opens Tinotenda Chingwena's Twitter page"
+                class="dropdown-item" href="https://twitter.com/ndini_nhari" target="_blank"><img
+                  src="../images/SocialMedia/twitter.svg" th:src="@{/images/SocialMedia/twitter.svg}" class="linkimg"
+                  alt="Twitter Logo" /> <span>Twiter</span> </a>
+              <a title="Tinotenda Chingwena's Github page" aria-label="Opens Tinotenda Chingwena's GitHub page"
+                class="dropdown-item" href="https://github.com/tinochings" target="_blank"><img
+                  src="../../static/images/SocialMedia/githublogo.svg" th:src="@{/images/SocialMedia/githublogo.svg}"
+                  class="linkimg" alt="Github Logo" /> <span>Github</span> </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="introduction" class="container">
+    <div class="row">
+
+      <div id="aboutmetext" class="col">
+        <h1 id="fullName">TINOTENDA CHINGWENA</h1>
+        <h2 id="developer">Software Developer</h2>
+        <div id="statement">
+          <p>I am obsessed with coding and I am not ashamed : &#41;</p>
+        </div>
+        <p>I am an innovative computer science graduate looking to get involved in
+          technological projects that strongly impact people. I am looking to
+          make positive changes for people through technological advancements
+          with the skills I have obtained throughout my degree. I have published
+          an educative application that contains documented Zimbabwean
+          totemic history. It is available for purchase on the Google Play Store and
+          it is called Madzinza. I have also published an open-source Android
+          application I solely made on my GitHub profile. I am very
+          communicative and read a lot of philosophical treatises to understand
+          human nature more. As a consequence, I work well with different kinds
+          of people.</p>
+      </div>
+      <div class="col">
+        <img id="personalimage" src="../../static/images/SocialMedia/personalphotodupe.png"
+          th:src="@{/images/SocialMedia/personalphotodupe.png}" alt="Photo of Tinotenda Chingwena">
+      </div>
+    </div>
+  </section>
+
+  <section id="aboutme" class="container">
+    <div class="row">
+      <div id="education" class="col col-outline">
+        <h1>Education</h1>
+        <div class="row">
+
+          <div class="col education-col">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <p>WO Bachelor Computer Science 2022<br> Vrije Universiteit Amsterdam</p>
+          </div>
+
+          <div id="highschool" class="col education-col">
+            <i class="fa-solid fa-school"></i>
+            <p>Cambridge GCE Advanced Levels<br>Cambridge IGCSE Ordinary Levels</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="languages" class="col">
+        <h1>Languages</h1>
+        <div class="row">
+          <div class="col">
+            <p class="vertical-centre">Programming Languages:</p>
+            <ul>
+              <li>C, C++</li>
+              <li>HTML, CSS, JavaScript</li>
+              <li>Java, Kotlin, Scala</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <p class="vertical-centre">Vocal Languages:</p>
+            <ul>
+              <li>Chizezuru : fluent</li>
+              <li>English : fluent</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-md">
+    <div class="row project-social-outter-cont">
+      <h1 class="topic">Projects Done</h1>
+      <div class="row projects-carousel">
+        <div class="col project-item">
+          <div class="row">
+            <div class="col image-col">
+              <img src="../../static/images/ProjectsDone/Trin%20logo-01.png"
+                th:src="@{/images/ProjectsDone/Trin%20logo-01.png}" class="pictures" alt="Trin Media Website Logo" />
+            </div>
+            <div class="col a-col">
+              <a aria-label="Open Trin Media Website" title="Open Trin Media website" class="linktext"
+                href="https://www.trin3media.com" target="_blank">www.trin3media.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="col project-item">
+          <div class="row">
+            <div class="col image-col">
+              <img src="../../static/images/ProjectsDone/madzinza-01.png"
+                th:src="@{/images/ProjectsDone/madzinza-01.png}" class="pictures" alt="Madzinza Application Logo" />
+            </div>
+            <div class="col a-col">
+              <a aria-label="Link to Madzinza Download" title="Link to Madzinza Download" class="linktext"
+                href="https://play.google.com/store/apps/details?id=com.madzinza.madzinza" target="_blank">Download</a>
+            </div>
+          </div>
+        </div>
+        <div class="col project-item">
+          <div class="row">
+            <div class="col image-col">
+              <img src="../../static/images/ProjectsDone/poetskingdomlogo.png"
+                th:src="@{/images/ProjectsDone/poetskingdomlogo.png}" class="pictures"
+                alt="Poets Kingdom Application Logo" />
+            </div>
+            <div class="col a-col">
+              <a aria-label="Open Poets Kingdom source code" href="https://github.com/tinochings/PoetsKingdom"
+                target="_blank">Github</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="services">
+      <h1 class="heads">Request For My Services!</h1>
+      <p class="heads">An outline of my experiences can be found by clicking Experiences.
+        Secondly you can submit a request with a project proposal by clicking Services below</p>
+      <a title="Navigate to Tinotenda's experiences" aria-label="Navigate to Tinotenda's experiences"
+        class="heads menu-item" href="../../static/html/experiences.html" th:href="@{/experiences}">Experiences</a>
+      <a title="Navigate to request Tinotenda's services" aria-label="Navigate to request Tinotenda's services"
+        class="heads menu-item" href="../../static/html/services.html" th:href="@{/services}">Services</a>
+    </div>
+  </section>
+
+  <footer class="container">
+    <div class="row footer-row-cont">
+      <div class="col">
+        <div class="row">
+          <div id="footer-img-div" class="col">
+            <img class="giraffe" src="../../static/images/miscellaneous/giraffe.svg"
+              th:src="@{/images/miscellaneous/giraffe.svg}" alt="Giraffe" />
+          </div>
+          <div class="col">
+            <img class="giraffe" src="../../static/images/miscellaneous/giraffe_reverse.svg"
+              th:src="@{/images/miscellaneous/giraffe_reverse.svg}" alt="Giraffe" />
+          </div>
+        </div>
+      </div>
+      <div class="col vertical-centresn">
+        <p id="footer-salutation">Your identity is what defines you. Like my ancestors, my goal is to grow and exceed
+          above and beyond, like my totem
+          the giraffe. Learning and growing one step at a time.</p>
+        <p>
+          Nhari Unendoro
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

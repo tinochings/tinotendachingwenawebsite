@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../../static/css/error.css" th:href="@{/css/error.css}">
+    </head>
+
+
+<div class=spacer></div> 
+<div class=message>
+    <img src="../../static/images/logo/WCLOGO1.png" th:src="@{/images/logo/WCLOGO1.png}"
+                        alt="Tinotenda Chingwena brand Logo" width="200" height="200">
+<div class=message__title>Error <p class="message__title" th:text="${errorCode}"></p> NOT FOUND</div>
+<p> An error occurred in the application and your page could not be served. The requested web page does not exist.
+</p> 
+</div>
+</html>

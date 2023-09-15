@@ -1,0 +1,88 @@
+@keyframes alertBoxAnim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.alertBox {
+    background: #533621;
+    background-size: 100% 100%;
+    border-radius: 15px;
+    animation: alertBoxAnim;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    width: 600px;
+    height: 300px;
+    z-index: 1080;
+}
+
+.closebtn {
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 35px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.alertBody,
+.alertTitle {
+    padding-left: 20px;
+}
+
+.alertTitle {
+    height: 60px;
+    line-height: 60px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.alertBody {
+    height: 240px;
+    align-items: center;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.alertBox p,
+.alertBox h1 {
+    color: white;
+}
+
+.alertBox h1 {
+    text-decoration: underline;
+    text-align: center;
+}
+
+.alertBox h1 {
+    font-size: 35px;
+}
+.alertBox p {
+    font-size: 20px;
+    padding: 0;
+}
+
+#formLoadingGif {
+    height: 100px !important;
+    width: 100px !important;
+    padding: 0;
+}
+
+.alertBody .row {
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    .alertBox {
+        width: 100%;
+    }
+    .alertBody{
+        display: flex;
+        justify-content: center;
+    }
+}
