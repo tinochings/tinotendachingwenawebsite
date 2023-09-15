@@ -18,8 +18,7 @@ public class RedisConfig {
     @Bean
     public Config config() {
         Config config = new Config();
-//        config.useSingleServer()
-        config.useSingleServer().setPassword("p6f2f323da02ad7f3c0f0ffad78c507c2c571df99480cd18bac353a9a2b3bb0d0").setAddress("rediss://:p6f2f323da02ad7f3c0f0ffad78c507c2c571df99480cd18bac353a9a2b3bb0d" +
+        config.useClusterServers().setPassword("p6f2f323da02ad7f3c0f0ffad78c507c2c571df99480cd18bac353a9a2b3bb0d0").addNodeAddress("rediss://:p6f2f323da02ad7f3c0f0ffad78c507c2c571df99480cd18bac353a9a2b3bb0d" +
                 "0@ec2-63-33-139-127.eu-west-1.compute.amazonaws.com:16710");
         return config;
     }
