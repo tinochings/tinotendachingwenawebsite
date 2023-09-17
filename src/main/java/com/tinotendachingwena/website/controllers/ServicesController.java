@@ -1,9 +1,9 @@
 package com.tinotendachingwena.website.controllers;
 
-import com.tinotendachingwena.website.RateLimitConfig;
 import com.tinotendachingwena.website.models.EmailDetails;
 import com.tinotendachingwena.website.models.ServicesRequest;
 import com.tinotendachingwena.website.services.EmailService;
+import com.tinotendachingwena.website.services.RateLimitingService;
 import com.tinotendachingwena.website.services.ServicesService;
 import com.tinotendachingwena.website.utils.StringResources;
 import io.github.bucket4j.Bucket;
@@ -27,7 +27,8 @@ public class ServicesController {
     @Autowired
     private ServicesService servicesService;
     @Autowired
-    RateLimitConfig rateLimitConfig;
+    private RateLimitingService rateLimitingService;
+
     private final EmailDetails emailDetails = new EmailDetails("chingtino@gmail.com", "", "", "");
     private final ResponseEntity<String> responseOk = new ResponseEntity<>(StringResources.goodServicesRequest, HttpStatus.OK);
     private final ResponseEntity<String> responseOkSn = new ResponseEntity<>(StringResources.goodServicesRequestSn, HttpStatus.OK);
@@ -48,7 +49,7 @@ public class ServicesController {
                                                HttpServletRequest request) {
 
         String ipAddress = request.getRemoteAddr();
-        Bucket bucket = rateLimitConfig.resolveBucket(ipAddress);
+        Bucket bucket = rateLimitingService.resolveBucket(ipAddress);
 
         if (bucket.tryConsume(1)) {
             if (bindingResult.hasErrors()) {
@@ -82,7 +83,7 @@ public class ServicesController {
     public ResponseEntity<String> servicesPostSn(@Valid ServicesRequest servicesRequest, BindingResult bindingResult,
                                                  HttpServletRequest request) {
         String ipAddress = request.getRemoteAddr();
-        Bucket bucket = rateLimitConfig.resolveBucket(ipAddress);
+        Bucket bucket = rateLimitingService.resolveBucket(ipAddress);
         if (bucket.tryConsume(1)) {
             if (bindingResult.hasErrors()) {
                 StringBuilder inputRetString = new StringBuilder();

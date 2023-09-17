@@ -109,7 +109,7 @@ public class ServiceTest {
     }
 
         /**
-     * Tests that all possible validations are sent as a response to user except name and email validation responses
+     * Tests that a successfu response string is sent
      */
     @Test
     public void testSuccessfulServiceRequest() throws Exception {
