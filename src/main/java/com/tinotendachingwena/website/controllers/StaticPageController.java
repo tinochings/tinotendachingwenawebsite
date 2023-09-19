@@ -53,7 +53,7 @@ public class StaticPageController {
             produces = MediaType.APPLICATION_XML_VALUE)
     public ResponseEntity<XmlUrlSet> sitemap(){
         XmlUrlSet xmlUrlSet = new XmlUrlSet();
-        XmlUrl xmlUrl = new XmlUrl("https://www.trin3media.com", "2023-09-11");
+        XmlUrl xmlUrl = new XmlUrl("https://www.tinotendachingwena.com", "2023-09-19");
 
         xmlUrlSet.addUrl(xmlUrl);
 
