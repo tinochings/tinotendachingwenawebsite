@@ -29,7 +29,7 @@ public class ServicesController {
     @Autowired
     private RateLimitingService rateLimitingService;
 
-    private final EmailDetails emailDetails = new EmailDetails("chingtino@gmail.com", "", "", "");
+    private final EmailDetails emailDetails = new EmailDetails("tinotendachings@gmail.com", "", "", "");
     private final ResponseEntity<String> responseOk = new ResponseEntity<>(StringResources.goodServicesRequest, HttpStatus.OK);
     private final ResponseEntity<String> responseOkSn = new ResponseEntity<>(StringResources.goodServicesRequestSn, HttpStatus.OK);
     private final ResponseEntity<String> responseFailure = new ResponseEntity<>(StringResources.badServicesRequest,
