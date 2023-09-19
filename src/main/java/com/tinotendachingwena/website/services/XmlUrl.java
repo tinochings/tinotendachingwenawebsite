@@ -14,12 +14,14 @@ public class XmlUrl {
 
     @XmlElement
     private String lastmod;
-
+    @XmlElement
+    private String priority;
     public XmlUrl(){
     }
-    public XmlUrl(String loc, String date) {
+    public XmlUrl(String loc, String date, String priority) {
         this.loc = loc;
         this.lastmod = date;
+        this.priority = priority;
     }
 
     public String getLoc() {
@@ -29,4 +31,6 @@ public class XmlUrl {
     public String getLastmod() {
         return lastmod;
     }
+
+    public String getPriority() {return priority;}
 }
