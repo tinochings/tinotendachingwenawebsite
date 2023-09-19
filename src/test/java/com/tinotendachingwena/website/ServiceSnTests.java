@@ -272,7 +272,7 @@ public class ServiceSnTests {
         }
         this.mockMvc.perform(post("/sn/service").contentType(MediaType.APPLICATION_FORM_URLENCODED_VALUE)
                 .content(quoteAsUrlEncoded(servicesReq))).andExpect(status().isTooManyRequests()).andExpect(
-                content().string(StringResources.tooManyRequest)
+                content().string(StringResources.tooManyRequestSn)
         );
     }
 
@@ -298,7 +298,7 @@ public class ServiceSnTests {
         this.mockMvc.perform(post("/sn/service").contentType(MediaType.APPLICATION_FORM_URLENCODED_VALUE)
                 .content(quoteAsUrlEncoded(servicesReq)).with(request -> {request.setRemoteAddr("192.198.18555");
                     return request;})).andExpect(status().isTooManyRequests()).andExpect(
-                content().string(StringResources.tooManyRequest)
+                content().string(StringResources.tooManyRequestSn)
         );
         for (int i = 0; i < 5; i++){
             this.mockMvc.perform(post("/sn/service").contentType(MediaType.APPLICATION_FORM_URLENCODED_VALUE)
@@ -309,7 +309,7 @@ public class ServiceSnTests {
         this.mockMvc.perform(post("/sn/service").contentType(MediaType.APPLICATION_FORM_URLENCODED_VALUE)
                 .content(quoteAsUrlEncoded(servicesReq)).with(request -> {request.setRemoteAddr("192.198.18556");
                     return request;})).andExpect(status().isTooManyRequests()).andExpect(
-                content().string(StringResources.tooManyRequest)
+                content().string(StringResources.tooManyRequestSn)
         );
     }
     private String encodeValue(String value) throws UnsupportedEncodingException {

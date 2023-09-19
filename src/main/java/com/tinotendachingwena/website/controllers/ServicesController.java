@@ -36,6 +36,8 @@ public class ServicesController {
             HttpStatus.BAD_REQUEST);
     private final ResponseEntity<String> tooManyRequests = new ResponseEntity<>(StringResources.tooManyRequest,
             HttpStatus.TOO_MANY_REQUESTS);
+    private final ResponseEntity<String> tooManyRequestsSn = new ResponseEntity<>(StringResources.tooManyRequestSn,
+            HttpStatus.TOO_MANY_REQUESTS);
     private final ResponseEntity<String> responseFailureSn = new ResponseEntity<>(StringResources.badServicesRequestSn,
             HttpStatus.BAD_REQUEST);
     private final ResponseEntity<String> emailResponseFailure = new ResponseEntity<>(StringResources.badServicesRequest,
@@ -109,6 +111,6 @@ public class ServicesController {
                 return responseFailureSn;
             }
         }
-        return tooManyRequests;
+        return tooManyRequestsSn;
     }
 }

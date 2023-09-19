@@ -12,4 +12,6 @@ public class StringResources {
 
     public static final String tooManyRequest = "You have submitted too many requests within a short space of time." +
             "Try again in a minute";
+    public static final String tooManyRequestSn = "Zvikumbiro zvenyu zvawanda panguva ipfupi pfupi. Ndino kumbira kuti mumire" +
+            "kwenguva inoita 1 minute modzokorora futi.";
 }
