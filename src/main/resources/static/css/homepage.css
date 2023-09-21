@@ -41,6 +41,9 @@ body {
   background-color: var(--background_color);
 }
 
+html{
+  scroll-behavior: smooth;
+}
 ul {
   padding: 0px;
   list-style: none;
